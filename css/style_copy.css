@@ -11,6 +11,7 @@ body {
 	font-size: 16px;
 	line-height: 1.6;
 	background-color: #f9f9f9;
+	
 }
 
 h1,
@@ -22,7 +23,7 @@ h6 {
 	font-family: "Courier New", Courier, monospace;
 	font-weight: bold;
 	line-height: 1;
-	text-transform: uppercase;
+	text-transform: none;
 	margin: 0 0 1.6rem;
 }
 
@@ -62,9 +63,13 @@ hr {
 	margin: 0 auto;
 	width: 100%;
 	max-width: 1000px;
+	
 }
 
-.header {
+
+
+
+header {
 	background-color: #64bcda;
 	border-bottom: 8px solid #000000;
 	margin-bottom: 3.2rem;
@@ -89,14 +94,30 @@ hr {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	text-transform: none;
+	font-weight: bold;
+
+}
+
+
+.pub-info_details {
+	
+	justify-content: flex-start;
 	text-transform: uppercase;
 }
 
-.main-article {
+.pub-info_date {
+	
+	justify-content: flex-end;
+}
+
+
+article {
 	background-color: #e2e2e2;
 	padding: 1.6rem;
 	width: 100%;
 	margin: 0 0 1.6rem;
+	border-radius: .6rem;
 }
 
 .main-article_cover {
@@ -125,6 +146,7 @@ hr {
 	color: #f2f2f2;
 	margin: 0 0 1.6rem;
 	font-size: 0.9rem;
+	border-radius: .6rem;
 }
 
 .main-sidebar_thumb {
@@ -159,31 +181,43 @@ hr {
 	display: block;
 }
 
-.footer {
+footer {
 	text-align: center;
 }
 
-@media only screen and (min-width: 800px) {
+@media (min-width: 800px) {
 	.header_pub-info {
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
 	}
 
+
+
 	.main-article {
+		display: flex;
+		flex-direction: column;
+		
 		width: 60%;
 		border-radius: 0.6rem;
 		margin: 0;
 	}
 
-	.main-sidebar {
+ .main-sidebar {
+		display: flex;
 		width: 40%;
+		flex-direction: column;
+
 		border-radius: 0.6rem;
 		margin: 0;
 	}
 
-	.container {
+	.column {
 		display: flex;
-		flex-direction: row;
+	margin: auto;
+	gap: 30px;
 	}
+
+
+	
 }
